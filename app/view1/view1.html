@@ -1,0 +1,46 @@
+<div class="container">
+    <h2 class="h2 text-center">Clientes registrados</h2>
+    <hr class="hr"/>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" class="form-control" ng-model="customerfilter" placeholder="Buscar cliente"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p class="lead form-control">Cliente seleccionado: <b>{{selected.nombre}}</b></p>
+        </div>
+    </div>
+    <div class="panel-body cuerpo">
+        <table class="table table-hover" >
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>País</th>
+                    <th>Ciudad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="customer in allCustomers | filter:customerfilter | filter:buscar"
+                    ng-click="showSelectedElement(customer)"
+                    ng-class-even="'even'" 
+                    ng-class-odd="'odd'" >
+                    <td>{{customer.id}}</td>
+                    <td>{{customer.nombre}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.direccion}}</td>
+                    <td>{{customer.telefono}}</td>
+                    <td>{{customer.pais}}</td>
+                    <td>{{customer.ciudad}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

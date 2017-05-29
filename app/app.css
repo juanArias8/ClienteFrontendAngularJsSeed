@@ -1,0 +1,17 @@
+.footer{
+    padding: 1%;
+    background: rgba(0,0,0,0.08);
+}
+
+.cuerpo{
+    height: 60vh;
+    overflow: auto;
+}
+
+.inte{
+    height: 70vh;
+}
+
+.infor{
+    height: 70vh;
+}

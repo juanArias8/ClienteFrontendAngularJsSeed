@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 infor">
+            <div class="container-fluid">
+                <h2 class="h2">{{mensaje.titulo}}</h2>
+                <hr class="hr"/>
+                <p class="lead">>> {{mensaje.area}}</p>
+                <p class="lead">>> {{mensaje.universidad}}</p>
+                <p class="lead">>> Profesor: {{mensaje.profesor}}</p>
+                <p class="lead">>>{{mensaje.descripcion}}</p>
+            </div>
+        </div>
+        <div class="col-md-2">
+            
+        </div>
+        <div class="col-md-4 inte">
+            <h3 class="h3 text-center">Integrantes</h3>
+            <table class="table table-hover text-center">
+                <tr ng-repeat="integrante in integrantes | filter:buscar">
+                    <td>{{integrante.name}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
